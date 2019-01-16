@@ -50,8 +50,7 @@ Route::group(['middleware' => ['auth']], function() {
 	Route::get('categories/{id}',['as'=>'categories.show','uses'=>'CategoriesController@show','middleware' => ['role:admin']]);
 	Route::get('categories/{id}/edit',['as'=>'categories.edit','uses'=>'CategoriesController@edit','middleware' => ['role:admin']]);
 	Route::patch('categories/{id}',['as'=>'categories.update','uses'=>'CategoriesController@update','middleware' => ['role:admin']]);
-	Route::delete('categories/{id}',['as'=>'categories.destroy','uses'=>'CategoriesController@destroy','middleware' => ['role:admin']]);	
-
+	Route::delete('categories/{id}',['as'=>'categories.destroy','uses'=>'CategoriesController@destroy','middleware' => ['role:admin']]);
 	Route::get('category/{id}',['as'=>'category.index','uses'=>'CategoryController@index']);
 	
 });
